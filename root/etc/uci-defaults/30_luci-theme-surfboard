@@ -1,0 +1,7 @@
+#!/bin/sh
+uci batch <<-EOF
+	set luci.themes.Surfboard=/luci-static/surfboard
+	set luci.main.mediaurlbase=/luci-static/surfboard
+	commit luci
+EOF
+exit 0

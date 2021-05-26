@@ -1,0 +1,39 @@
+<%#
+
+  luci-theme-surfboard
+      Copyright 2017 Julien Schmidt <js@stusta.net>
+  luci-theme-darkmatter
+      Copyright 2017 chrono <https://apollo.open-resource.org>
+  luci-theme-material
+      Copyright 2015 Lutty Yang <lutty@wcan.in>
+  luci-theme-bootstrap:
+      Copyright 2012 David Menting <david@nut-bolt.nl>
+      Copyright 2008 Steven Barth <steven@midlink.org>
+      Copyright 2008 Jo-Philipp Wich <jow@openwrt.org>
+
+  This program is free software; you can redistribute it and/or
+  modify it under the terms of the GNU General Public License
+  as published by the Free Software Foundation; either version 2
+  of the License, or (at your option) any later version.
+-%>
+
+<%
+	local disp = require "luci.dispatcher"
+	local request  = disp.context.path
+	local category = request[1]
+	local tree = disp.node()
+%>
+                </div>
+                <footer class="mobile-hide">
+                </footer>
+            </div>
+        </div>
+
+    <script>
+        // thanks for Jo-Philipp Wich <jow@openwrt.org>
+        var luciLocation = <%= luci.http.write_json(luci.dispatcher.context.path) %>;
+    </script>
+    <script src="<%=media%>/js/jquery.min.js"></script>
+    <script src="<%=media%>/js/script.js"></script>
+</body>
+</html>
