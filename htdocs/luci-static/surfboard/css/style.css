@@ -1,5 +1,5 @@
 /**
- *  luci-theme-surfboard
+ *  luci-theme-pharos
  *      Copyright 2017 Julien Schmidt <js@stusta.net>
  *  luci-theme-darkmatter
  *      Copyright 2017 chrono <https://apollo.open-resource.org>
@@ -137,7 +137,9 @@ a:link,
 a:active,
 a:visited,
 a:hover {
-    color: rgba(117, 137, 12, 0.75);
+
+
+    color: rgba(82, 168, 236, 0.8);
     text-decoration: none;
 }
 
@@ -213,7 +215,7 @@ header, .main {
 
 header {
     height: 56px;
-    background: url("../img/noise.png") #1f1e1a repeat;
+    background: url("../img/stripes.svg") #1f1e1a repeat;
     color: #d8d3c5;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .26), inset 0 0 42px 0 #000;;
     transition: box-shadow .2s;
@@ -229,13 +231,14 @@ header > .container {
 }
 
 header > .container > #ssn-logo {
-    background: #4f4e4a url('../img/stustanet.svg') no-repeat;
-    background-size: 166px 28px;
-    width: 166px;
+    background: url('../img/stustanet.svg') no-repeat;
+    background-size: 212px 28px;
+    width: 212px;
     display: inline-block;
     height: 28px;
     margin: 14px 10px 14px 0;
 }
+
 
 header > .container > .brand {
     font-size: 1.5rem;
@@ -310,6 +313,64 @@ footer > a {
     color: rgba(117, 137, 12, 1)
 }
 
+
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: var(--navBorder);
+  text-align: center;
+  height:calc(58px + constant(safe-area-inset-bottom));
+  height:calc(58px + env(safe-area-inset-bottom));
+  background-color: var(--navbgColor);
+    -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+}
+
+.navbar a {
+    float: left;
+    text-align: center;
+    padding: 13px 0;
+    width: 26%;
+    text-decoration: none;
+    max-width: 100px;
+}
+
+.cbi-map {
+    margin-top: 10px;
+}
+
+#cbi-shadowsocksr .cbi-map-descr {
+    display: none;
+}
+
+.navbar a img {
+  width: 26px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @keyframes anim-rotate {
     0% {
         -webkit-transform: rotate(0);
@@ -380,6 +441,8 @@ footer > a {
     font-size: 0.85rem;
     background-color: #4f4e4a;
     text-shadow: -1px 0 #1f1e1a, 0 1px #1f1e1a, 1px 0 #1f1e1a, 0 -1px #1f1e1a, 0 0 3px #1f1e1a;
+    
+
 }
 
 .main-right > #maincontent {
@@ -532,7 +595,7 @@ h3 {
 }
 
 .main > .main-left > .nav > .slide > .menu:hover {
-    background: #4f4e4a url("../img/noise.png") repeat;
+    background: #4f4e4a url("../img/stripes.svg") repeat;
 }
 
 .main > .main-left > .nav > .slide > .menu.active {
@@ -750,7 +813,7 @@ div.main div.main-left ul.nav li.slide a {
 }
 
 .main > .main-left > .nav > .slide > .slide-menu > li:hover {
-    background: #3f3e3a url("../img/noise.png") repeat;
+    background: #3f3e3a url("../img/stripes.svg") repeat;
 }
 
 .main > .main-left > .nav > .slide > .slide-menu > .active:hover {
@@ -853,7 +916,7 @@ table {
     border-spacing: 0;
     border-collapse: collapse;
     width: 100%;
-    border: 1px solid #07223e;
+    border: 1px solid #3f3e3a;
     margin: 0 !important;
 }
 
@@ -1077,6 +1140,7 @@ form.inline + form.inline,
     padding-left: 0.5rem;
     background-color: #3f3e3a;
     border-bottom: 1px solid #2f2e2a;
+    margin-bottom: 20px;
 }
 
 .cbi-tabmenu > li,
@@ -1121,7 +1185,7 @@ form.inline + form.inline,
 }
 
 .cbi-tabmenu {
-    background: #171612 url("../img/noise.png") repeat;
+    background: #171612 url("../img/stripes.svg") repeat;
 }
 
 .cbi-section-remove:nth-of-type(2n),
@@ -1192,7 +1256,7 @@ form.inline + form.inline,
 }
 
 .cbi-section-table-titles {
-    background: #292823 url("../img/noise.png") repeat;
+    background: #292823 url("../img/stripes.svg") repeat;
 }
 
 /* desc */
@@ -1227,7 +1291,7 @@ form.inline + form.inline,
     padding: 10px;
     border: 1px solid #3f3e3a;
     text-align: right;
-    background: #2f2e2a;
+     background: url(../img/stripes.svg) #2f2e2a;
     box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.6);
 }
 
@@ -1726,7 +1790,7 @@ header > .container > .pull-right > * {
 }
 
 .node-system-reboot > .main > .main-right p:nth-last-child(1){
-    background: #1f1e1a url("../img/noise.png") repeat;
+    background: #1f1e1a url("../img/stripes.svg") repeat;
     padding: 2rem;
 }
 
@@ -1999,7 +2063,7 @@ header > .container > .pull-right > * {
 }
 
 .node-network-wireless fieldset .cbi-section-table tr:nth-of-type(1) {
-    background: #292823 url("../img/noise.png") repeat;
+    background: #292823 url("../img/stripes.svg") repeat;
 }
 
 .node-network-wireless fieldset .cbi-section-table:nth-of-type(1) br {
